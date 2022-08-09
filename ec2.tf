@@ -1,6 +1,6 @@
 # Terraform Configure setting block
 terraform {
-  required_providers {}
+  required_providers {
     aws = {
       source  = "hashicorp/aws"
       
@@ -29,9 +29,9 @@ module "vpc" {
 
   # VPC Basic Details
   name = "vpc-dev"
-  cidr = "10.0.0.0/17"   
+  cidr = "192.168.0.0/17"   
   azs                 = ["us-east-1a"]
-  private_subnets     = ["10.0.1.0/24"]
-  public_subnets      = ["10.0.101.0/24"]
+  private_subnets     = ["192.168.1.0/24"]
+  public_subnets      = ["192.168.2.0/24"]
 
 #new comment added 
